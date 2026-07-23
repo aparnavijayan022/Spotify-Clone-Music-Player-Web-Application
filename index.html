@@ -1,0 +1,690 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Spotify Clone</title>
+
+    <link rel="stylesheet" href="style.css">
+
+    <link rel="icon" href="./Assets/logo.png">
+
+    <!-- Google Font -->
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@100..900&display=swap"
+          rel="stylesheet">
+
+    <!-- Font Awesome -->
+
+    <link rel="stylesheet"
+          href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/7.0.1/css/all.min.css">
+
+</head>
+
+<body>
+
+<div class="main">
+
+    <!-- ===========================
+            SIDEBAR
+    ============================ -->
+
+    <div class="sidebar">
+
+        <!-- Navigation -->
+
+        <div class="nav">
+
+            <div class="nav-option active" id="homeBtn">
+
+                <i class="fa-solid fa-house"></i>
+
+                <a href="#">Home</a>
+
+            </div>
+
+            <div class="nav-option" id="searchBtn">
+
+                <i class="fa-solid fa-magnifying-glass"></i>
+
+                <a href="#">Search</a>
+
+            </div>
+
+        </div>
+
+        <!-- ===========================
+                LIBRARY
+        ============================ -->
+
+        <div class="library">
+
+            <div class="options">
+
+                <div class="lib-option nav-option"
+                     id="libraryBtn">
+
+                    <img src="./Assets/library_icon.png">
+
+                    <a href="#">Your Library</a>
+
+                </div>
+
+                <div class="icons">
+
+                    <i class="fa-solid fa-plus"
+                       id="addLibrary"></i>
+
+                    <i class="fa-solid fa-arrow-right"
+                       id="libraryArrow"></i>
+
+                </div>
+
+            </div>
+
+            <!-- Playlist Box -->
+
+            <div class="lib-box">
+
+                <div class="box">
+
+                    <p class="box-p1">
+
+                        Create your first playlist
+
+                    </p>
+
+                    <p class="box-p2">
+
+                        It's easy, we'll help you.
+
+                    </p>
+
+                    <button
+                        class="badge"
+                        id="createPlaylistBtn">
+
+                        Create Playlist
+
+                    </button>
+
+                </div>
+
+                <!-- Podcast Box -->
+
+                <div class="box">
+
+                    <p class="box-p1">
+
+                        Let's find some podcasts to follow
+
+                    </p>
+
+                    <p class="box-p2">
+
+                        We'll keep you updated on new episodes.
+
+                    </p>
+
+                    <button
+                        class="badge"
+                        id="browsePodcastBtn">
+
+                        Browse Podcasts
+
+                    </button>
+
+                </div>
+
+            </div>
+
+        </div>
+
+    </div>
+
+    <!-- ===========================
+          MAIN CONTENT STARTS
+    ============================ -->
+
+    <div class="main-content">
+                <!-- =======================
+            STICKY NAVIGATION
+        ======================== -->
+
+        <div class="sticky-nav">
+
+            <div class="sticky-nav-icons">
+
+                <img
+                    src="./Assets/backward_icon.png"
+                    id="backBtn">
+
+                <img
+                    src="./Assets/forward_icon.png"
+                    class="hide"
+                    id="forwardBtn">
+
+            </div>
+
+            <div class="sticky-nav-options">
+
+                <button
+                    class="badge nav-item hide"
+                    id="premiumBtn">
+
+                    Explore Premium
+
+                </button>
+
+                <button
+                    class="badge dark-badge nav-item"
+                    id="installBtn">
+
+                    <i class="fa-regular fa-circle-down"
+                       style="margin-right:5px;"></i>
+
+                    Install App
+
+                </button>
+
+                <i
+                    class="fa-regular fa-user nav-item"
+                    id="profileBtn">
+
+                </i>
+
+            </div>
+
+        </div>
+
+        <!-- =======================
+              SEARCH BAR
+        ======================== -->
+
+        <div
+            class="search-container"
+            id="searchContainer">
+
+            <input
+                type="text"
+                id="searchInput"
+                placeholder="Search songs, artists and albums...">
+
+        </div>
+
+        <!-- No Result -->
+
+        <p
+            id="noSongFound"
+            style="display:none;
+                   text-align:center;
+                   margin-top:20px;
+                   font-size:18px;">
+
+            No songs found.
+
+        </p>
+
+        <!-- =======================
+            RECENTLY PLAYED
+        ======================== -->
+
+        <h2 id="recentHeading">
+
+            Recently Played
+
+        </h2>
+
+        <div
+            class="cards-container"
+            id="recentContainer">
+
+            <div
+                class="card"
+                id="song1">
+
+                <img
+                    src="./Assets/beautiful-dream.png"
+                    class="card-img">
+
+                <p class="card-title">
+
+                    Beautiful Dream
+
+                </p>
+
+                <p class="card-info">
+
+                    Mixkit • Relaxing Piano Music
+
+                </p>
+
+            </div>
+
+        </div>
+
+        <!-- =======================
+            TRENDING NOW
+        ======================== -->
+
+        <h2>
+
+            Trending Now
+
+        </h2>
+
+        <div
+            class="cards-container">
+                        <!-- Song 2 -->
+
+            <div class="card" id="song2">
+
+                <img
+                    src="./Assets/deep-urban.png"
+                    class="card-img">
+
+                <p class="card-title">
+
+                    Deep Urban
+
+                </p>
+
+                <p class="card-info">
+
+                    Mixkit • Urban Night Beats
+
+                </p>
+
+            </div>
+
+            <!-- Song 3 -->
+
+            <div class="card" id="song3">
+
+                <img
+                    src="./Assets/driving-ambition.png"
+                    class="card-img">
+
+                <p class="card-title">
+
+                    Driving Ambition
+
+                </p>
+
+                <p class="card-info">
+
+                    Mixkit • Road Trip Vibes
+
+                </p>
+
+            </div>
+
+            <!-- Song 4 -->
+
+            <div class="card" id="song4">
+
+                <img
+                    src="./Assets/hazy-after-hours.png"
+                    class="card-img">
+
+                <p class="card-title">
+
+                    Hazy After Hours
+
+                </p>
+
+                <p class="card-info">
+
+                    Mixkit • Chill Evening
+
+                </p>
+
+            </div>
+
+            <!-- Song 5 -->
+
+            <div class="card" id="song5">
+
+                <img
+                    src="./Assets/hiphop02.png"
+                    class="card-img">
+
+                <p class="card-title">
+
+                    Hip Hop 02
+
+                </p>
+
+                <p class="card-info">
+
+                    Mixkit • Hip Hop Beats
+
+                </p>
+
+            </div>
+
+            <!-- Song 6 -->
+
+            <div class="card" id="song6">
+
+                <img
+                    src="./Assets/serene-view.png"
+                    class="card-img">
+
+                <p class="card-title">
+
+                    Serene View
+
+                </p>
+
+                <p class="card-info">
+
+                    Mixkit • Calm Instrumental
+
+                </p>
+
+            </div>
+
+        </div>
+
+        <!-- =======================
+            FEATURED CHARTS
+        ======================== -->
+
+        <h2>
+
+            Featured Charts
+
+        </h2>
+
+        <div class="cards-container">
+
+            <!-- Song 7 -->
+
+            <div class="card" id="song7">
+
+                <img
+                    src="./Assets/silent-descent.png"
+                    class="card-img">
+
+                <p class="card-title">
+
+                    Silent Descent
+
+                </p>
+
+                <p class="card-info">
+
+                    Mixkit • Ambient Music
+
+                </p>
+
+            </div>
+
+            <!-- Song 8 -->
+
+            <div class="card" id="song8">
+
+                <img
+                    src="./Assets/sun-and-his-daughter.png"
+                    class="card-img">
+
+                <p class="card-title">
+
+                    Sun And His Daughter
+
+                </p>
+
+                <p class="card-info">
+
+                    Mixkit • Acoustic Melody
+
+                </p>
+
+            </div>
+
+            <!-- Song 9 -->
+
+            <div class="card" id="song9">
+
+                <img
+                    src="./Assets/tech-house-vibes.png"
+                    class="card-img">
+
+                <p class="card-title">
+
+                    Tech House Vibes
+
+                </p>
+
+                <p class="card-info">
+
+                    Mixkit • Electronic Music
+
+                </p>
+
+            </div>
+
+            <!-- Extra Card -->
+
+            <div class="card">
+
+                <img
+                    src="./Assets/card5img.jpeg"
+                    class="card-img">
+
+                <p class="card-title">
+
+                    Top Songs Global
+
+                </p>
+
+                <p class="card-info">
+
+                    Updated Daily
+
+                </p>
+
+            </div>
+
+            <!-- Extra Card -->
+
+            <div class="card">
+
+                <img
+                    src="./Assets/card6img.jpeg"
+                    class="card-img">
+
+                <p class="card-title">
+
+                    Top Songs India
+
+                </p>
+
+                <p class="card-info">
+
+                    Updated Daily
+
+                </p>
+
+            </div>
+
+        </div>
+
+        <!-- Footer -->
+
+        <div class="footer">
+
+            <div class="line"></div>
+
+        </div>
+
+    </div>
+
+</div>
+<!-- =======================
+        MUSIC PLAYER
+======================== -->
+
+<div class="music-player">
+
+    <!-- Album Section -->
+
+    <div class="album">
+
+        <img
+            src="./Assets/beautiful-dream.png"
+            class="album-img"
+            id="albumImage">
+
+        <div class="song-details">
+
+            <p
+                class="song-name"
+                id="songTitle">
+
+                Beautiful Dream
+
+            </p>
+
+            <p
+                class="artist-name"
+                id="artistName">
+
+                Mixkit
+
+            </p>
+
+        </div>
+
+        <i
+            class="fa-regular fa-heart album-icon"
+            id="heartBtn"></i>
+
+        <i
+            class="fa-solid fa-tv album-icon"
+            id="deviceBtn"></i>
+
+    </div>
+
+    <!-- =====================
+            PLAYER
+    ====================== -->
+
+    <div class="player">
+
+        <div class="player-controls">
+
+            <img
+                src="./Assets/player_icon1 (2).png"
+                class="player-control-icon"
+                id="shuffleBtn">
+
+            <img
+                src="./Assets/player_icon2.png"
+                class="player-control-icon"
+                id="prevBtn">
+
+            <img
+                src="./Assets/player_icon3 (1).png"
+                class="player-control-icon"
+                id="playBtn"
+                style="height:2rem;opacity:1;">
+
+            <img
+                src="./Assets/player_icon4 (1).png"
+                class="player-control-icon"
+                id="nextBtn">
+
+            <img
+                src="./Assets/player_icon5 (1).png"
+                class="player-control-icon"
+                id="repeatBtn">
+
+        </div>
+
+        <!-- Progress Bar -->
+
+        <div class="playback-bar">
+
+            <span
+                class="curr-time"
+                id="currentTime">
+
+                0:00
+
+            </span>
+
+            <input
+                type="range"
+                min="0"
+                max="100"
+                value="0"
+                class="progress-bar"
+                id="progressBar">
+
+            <span
+                class="tot-time"
+                id="totalTime">
+
+                0:00
+
+            </span>
+
+        </div>
+
+    </div>
+
+    <!-- =====================
+        RIGHT CONTROLS
+    ====================== -->
+
+    <div class="controls">
+
+        <i
+            class="fa-regular fa-square-play control-icon"
+            id="queueBtn"></i>
+
+        <i
+            class="fa-solid fa-microphone control-icon"
+            id="lyricsBtn"></i>
+
+        <i
+            class="fa-solid fa-list control-icon"
+            id="playlistBtn"></i>
+
+        <i
+            class="fa-solid fa-laptop control-icon"
+            id="laptopBtn"></i>
+
+        <i
+            class="fa-solid fa-volume-high control-icon"></i>
+
+        <input
+            type="range"
+            min="0"
+            max="100"
+            value="80"
+            class="volume-bar"
+            id="volumeBar">
+
+    </div>
+
+</div>
+
+<!-- =======================
+        JAVASCRIPT
+======================== -->
+
+<script src="script.js"></script>
+
+</body>
+
+</html>
