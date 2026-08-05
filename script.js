@@ -11,63 +11,63 @@ const songs = [
         title: "Beautiful Dream",
         artist: "Mixkit",
         image: "./Assets/beautiful-dream.png",
-        audio: "./Songs/mixkit-beautiful-dream-493.mp3"
+        audio: "./songs/mixkit-beautiful-dream-493.mp3"
     },
 
     {
         title: "Deep Urban",
         artist: "Mixkit",
         image: "./Assets/deep-urban.png",
-        audio: "./Songs/mixkit-deep-urban-623.mp3"
+        audio: "./songs/mixkit-deep-urban-623.mp3"
     },
 
     {
         title: "Driving Ambition",
         artist: "Mixkit",
         image: "./Assets/driving-ambition.png",
-        audio: "./Songs/mixkit-driving-ambition-32.mp3"
+        audio: "./songs/mixkit-driving-ambition-32.mp3"
     },
 
     {
         title: "Hazy After Hours",
         artist: "Mixkit",
         image: "./Assets/hazy-after-hours.png",
-        audio: "./Songs/mixkit-hazy-after-hours-132.mp3"
+        audio: "./songs/mixkit-hazy-after-hours-132.mp3"
     },
 
     {
         title: "Hip Hop 02",
         artist: "Mixkit",
         image: "./Assets/hiphop02.png",
-        audio: "./Songs/mixkit-hip-hop-02-738.mp3"
+        audio: "./songs/mixkit-hip-hop-02-738.mp3"
     },
 
     {
         title: "Serene View",
         artist: "Mixkit",
         image: "./Assets/serene-view.png",
-        audio: "./Songs/mixkit-serene-view-443.mp3"
+        audio: "./songs/mixkit-serene-view-443.mp3"
     },
 
     {
         title: "Silent Descent",
         artist: "Mixkit",
         image: "./Assets/silent-descent.png",
-        audio: "./Songs/mixkit-silent-descent-614.mp3"
+        audio: "./songs/mixkit-silent-descent-614.mp3"
     },
 
     {
         title: "Sun And His Daughter",
         artist: "Mixkit",
         image: "./Assets/sun-and-his-daughter.png",
-        audio: "./Songs/mixkit-sun-and-his-daughter-580.mp3"
+        audio: "./songs/mixkit-sun-and-his-daughter-580.mp3"
     },
 
     {
         title: "Tech House Vibes",
         artist: "Mixkit",
         image: "./Assets/tech-house-vibes.png",
-        audio: "./Songs/mixkit-tech-house-vibes-130.mp3"
+        audio: "./songs/mixkit-tech-house-vibes-130.mp3"
     }
 
 ];
